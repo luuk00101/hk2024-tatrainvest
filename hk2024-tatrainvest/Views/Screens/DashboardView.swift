@@ -11,11 +11,15 @@ struct DashboardView: View {
     var body: some View {
         VStack {
             TopBarView()
-            ChatWindowView()
+            Button(action: {
+                            // Action for tapping on the portfolio balance
+                        }) {
+                            Image("main-report")
+                        }
+            DiscussView()
             BottomNavBarView()
         }
         .background(Color.black)
-        .edgesIgnoringSafeArea(.all) // Extend the black background to screen edges
     }
 }
 

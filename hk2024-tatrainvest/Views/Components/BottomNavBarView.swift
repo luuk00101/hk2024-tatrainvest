@@ -26,6 +26,5 @@ struct BottomNavBarView: View {
         }
         .padding()
         .background(Color.black)
-        .padding(.bottom, UIApplication.shared.windows.first?.safeAreaInsets.bottom) // Add padding on bottom
     }
 }

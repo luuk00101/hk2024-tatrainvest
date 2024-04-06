@@ -10,12 +10,13 @@ import SwiftUI
 struct TopBarView: View {
     var body: some View {
         HStack {
-            Image("logo") // Assume you have a logo image set in your assets
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 60)
+            Image("Tatra-banka-removebg-preview")
+                            .resizable() // Allows the image to be resized
+                            .aspectRatio(contentMode: .fit) // Ensures the content is scaled to fit the frame
+                            .frame(width: 50, height: 50) // Adjust the width and height as needed
             
             Spacer()
+                .frame(width: 80)
             
             Button(action: {
                 // Action for tapping on the portfolio balance
@@ -26,17 +27,9 @@ struct TopBarView: View {
             }
             
             Spacer()
-            
-            Button(action: {
-                // Action for tapping on the notification bell
-            }) {
-                Image(systemName: "bell.fill")
-                    .foregroundColor(.white)
-            }
         }
         .padding()
         .background(Color.black)
-        .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top) // Add padding on top
     }
 }
 
