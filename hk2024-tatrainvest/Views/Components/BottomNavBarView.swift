@@ -8,23 +8,44 @@
 import SwiftUI
 
 struct BottomNavBarView: View {
+    @Binding var currentScreen: CurrentScreen
+
+    let highlightColor = Color(red: 1/255, green: 142/255, blue: 237/255, opacity: 1.0)
+
     var body: some View {
         HStack {
             Spacer()
-            Image(systemName: "house.fill") // Home icon
-                .foregroundColor(.white)
+            Button(action: {
+                self.currentScreen = .home
+            }) {
+                Image(systemName: "house.fill")
+                    .foregroundColor(currentScreen == .home ? highlightColor : .white)
+            }
             Spacer()
-            Image(systemName: "chart.bar.fill") // Stats icon
-                .foregroundColor(.white)
+            Button(action: {
+                self.currentScreen = .stats
+            }) {
+                Image(systemName: "chart.bar.fill")
+                    .foregroundColor(currentScreen == .stats ? highlightColor : .white)
+            }
             Spacer()
-            Image(systemName: "newspaper.fill") // News icon
-                .foregroundColor(.white)
+            Button(action: {
+                self.currentScreen = .news
+            }) {
+                Image(systemName: "newspaper.fill")
+                    .foregroundColor(currentScreen == .news ? highlightColor : .white)
+            }
             Spacer()
-            Image(systemName: "person.fill") // Profile icon
-                .foregroundColor(.white)
+            Button(action: {
+                self.currentScreen = .profile
+            }) {
+                Image(systemName: "person.fill")
+                    .foregroundColor(currentScreen == .profile ? highlightColor : .white)
+            }
             Spacer()
         }
         .padding()
-        .background(Color.black)
+        .background(Color("DarkGray"))
     }
 }
+

@@ -1,5 +1,5 @@
 //
-//  ChatWindowView.swift
+//  DiscussView.swift
 //  hk2024-tatrainvest
 //
 //  Created by Lukáš Kollárovič on 06/04/2024.
@@ -15,7 +15,7 @@ struct DiscussView: View {
         VStack {
             if messages.isEmpty {
                 Text("Discuss")
-                    .font(.title)
+                    .font(Font.title.weight(.light))
                     .foregroundColor(.white)
                     .frame(maxWidth: .infinity, alignment: .leading)
             } else {

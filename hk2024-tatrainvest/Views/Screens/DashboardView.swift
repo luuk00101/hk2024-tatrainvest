@@ -7,17 +7,30 @@
 
 import SwiftUI
 
+enum CurrentScreen {
+    case home, stats, news, profile
+}
+
 struct DashboardView: View {
+    @State private var currentScreen = CurrentScreen.home
+    
     var body: some View {
         VStack {
             TopBarView()
-            Button(action: {
-                            // Action for tapping on the portfolio balance
-                        }) {
-                            Image("main-report")
-                        }
-            DiscussView()
-            BottomNavBarView()
+            if currentScreen == .home {
+                Button(action: {
+                                        }) {
+                                            Image("main-report")
+                                        }
+                            DiscussView()
+            }
+            if currentScreen == .stats {
+                Image("stats")
+                    .resizable()
+                    .frame(height: 609)
+            }
+            
+            BottomNavBarView(currentScreen: $currentScreen)
         }
         .background(Color.black)
     }

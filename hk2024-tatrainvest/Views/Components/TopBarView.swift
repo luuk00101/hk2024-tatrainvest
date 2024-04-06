@@ -29,7 +29,7 @@ struct TopBarView: View {
             Spacer()
         }
         .padding()
-        .background(Color.black)
+        .background(Color("DarkGray"))
     }
 }
 
