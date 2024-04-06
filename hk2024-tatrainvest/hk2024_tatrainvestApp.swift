@@ -11,7 +11,7 @@ import SwiftUI
 struct hk2024_tatrainvestApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            DashboardView()
         }
     }
 }
