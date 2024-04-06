@@ -14,6 +14,8 @@ struct LogInView: View {
     @State private var wrongPassword: Float  = 0
     @State private var showingLoginScreen = false
     
+    @State private var isLoggedIn = false
+    
     
     var body: some View {
         NavigationView {
@@ -26,45 +28,41 @@ struct LogInView: View {
 //                Circle()
 //                    .scale(1.35)
 //                    .foregroundColor(.white)
-                
-//                Image("tatra_banka_member_black")
-//                    .resizable()
-//                    .aspectRatio(contentMode: .fit)
 
                 VStack {
+                    NavigationLink(destination: QuestionView(), isActive: $isLoggedIn) {
+                                        EmptyView()
+                                    }
+                    
+                    Image("Tatra-banka-removebg-preview-wide")
+                        //.resizable()
+                        .frame(width: 50, height: 50)
+                        .aspectRatio(contentMode: .fit)
+                    
                     Text("Welcome to TatraInvest")
                         .font(.largeTitle)
                         .bold()
                         .padding(70)
                         .foregroundColor(.white)
-                                        
-                    Button("Login") {
-                        authenticateUser(username: username, password: password)
-                        }
-                    .foregroundColor(.black)
-                    .frame(width: 300, height: 50)
-                    .background(Color.white)
-                    .cornerRadius(0)
+                    
+                    StartButton(title: "login") {
+                        isLoggedIn = true
+
+                    }
+                    
+                    StartButton(title: "prihlásiť cez čítačku") {
+                        isLoggedIn = true
+                    }
+//                    .sheet(isPresented: $isShowingNextView) {
+//                                    // Present the second view using a sheet when isShowingNextView is true
+//                                    SecondView()
+
                     
                     NavigationLink(destination: Text("You are logged in @\(username)"), isActive: $showingLoginScreen) {
                         EmptyView()
                     }
                 }
             }.navigationBarHidden(true)
-        }
-    }
-    
-    func authenticateUser(username: String, password: String) {
-        if username.lowercased() == "mario2021" {
-            wrongUsername = 0
-            if password.lowercased() == "abc123" {
-                wrongPassword = 0
-                showingLoginScreen = true
-            } else {
-                wrongPassword = 2
-            }
-        } else {
-            wrongUsername = 2
         }
     }
 }

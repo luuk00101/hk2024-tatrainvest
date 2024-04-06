@@ -15,6 +15,8 @@
 		C8E1C7C92BC17E6B00A2D1F6 /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E1C7C82BC17E6B00A2D1F6 /* StartButton.swift */; };
 		C8E1C7CB2BC182CE00A2D1F6 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E1C7CA2BC182CD00A2D1F6 /* LogInView.swift */; };
 		C8E1C7CD2BC1872600A2D1F6 /* tatra_banka_member_black.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C8E1C7CC2BC1872600A2D1F6 /* tatra_banka_member_black.jpg */; };
+		C8F8EDAD2BC1C7A000EEE615 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F8EDAC2BC1C7A000EEE615 /* QuestionView.swift */; };
+		C8F8EDAF2BC1C94600EEE615 /* SurveyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F8EDAE2BC1C94600EEE615 /* SurveyButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		C8E1C7C82BC17E6B00A2D1F6 /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
 		C8E1C7CA2BC182CD00A2D1F6 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		C8E1C7CC2BC1872600A2D1F6 /* tatra_banka_member_black.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tatra_banka_member_black.jpg; path = ../../../../../Downloads/tatra_banka_member_black.jpg; sourceTree = "<group>"; };
+		C8F8EDAC2BC1C7A000EEE615 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		C8F8EDAE2BC1C94600EEE615 /* SurveyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,7 @@
 				80FEEC692BC16BB300759AF5 /* hk2024_tatrainvestApp.swift */,
 				C8E1C7C32BC178C000A2D1F6 /* WelcomeView.swift */,
 				C8E1C7CA2BC182CD00A2D1F6 /* LogInView.swift */,
+				C8F8EDAC2BC1C7A000EEE615 /* QuestionView.swift */,
 				C8E1C7C72BC17B6500A2D1F6 /* Components */,
 				C8E1C7C62BC17B5D00A2D1F6 /* Screens */,
 			);
@@ -99,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				C8E1C7C82BC17E6B00A2D1F6 /* StartButton.swift */,
+				C8F8EDAE2BC1C94600EEE615 /* SurveyButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -178,6 +184,8 @@
 				80FEEC6C2BC16BB300759AF5 /* ContentView.swift in Sources */,
 				C8E1C7C42BC178C000A2D1F6 /* WelcomeView.swift in Sources */,
 				C8E1C7C92BC17E6B00A2D1F6 /* StartButton.swift in Sources */,
+				C8F8EDAD2BC1C7A000EEE615 /* QuestionView.swift in Sources */,
+				C8F8EDAF2BC1C94600EEE615 /* SurveyButton.swift in Sources */,
 				80FEEC6A2BC16BB300759AF5 /* hk2024_tatrainvestApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
