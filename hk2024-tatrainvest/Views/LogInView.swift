@@ -18,7 +18,7 @@ struct LogInView: View {
     
     
     var body: some View {
-        //NavigationView {
+        NavigationView {
             ZStack {
                 Color.black
                     .ignoresSafeArea()
@@ -51,7 +51,7 @@ struct LogInView: View {
 //                                    // Present the second view using a sheet when isShowingNextView is true
 //                                    SecondView()
 
-                //}
+                }
             }.navigationBarHidden(true)
         }
     }
