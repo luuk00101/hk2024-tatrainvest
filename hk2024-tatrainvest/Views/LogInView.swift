@@ -18,16 +18,10 @@ struct LogInView: View {
     
     
     var body: some View {
-        NavigationView {
+        //NavigationView {
             ZStack {
                 Color.black
                     .ignoresSafeArea()
-//                Circle()
-//                    .scale(1.7)
-//                    .foregroundColor(.white.opacity(0.3))
-//                Circle()
-//                    .scale(1.35)
-//                    .foregroundColor(.white)
 
                 VStack {
                     NavigationLink(destination: QuestionView(), isActive: $isLoggedIn) {
@@ -57,11 +51,7 @@ struct LogInView: View {
 //                                    // Present the second view using a sheet when isShowingNextView is true
 //                                    SecondView()
 
-                    
-                    NavigationLink(destination: Text("You are logged in @\(username)"), isActive: $showingLoginScreen) {
-                        EmptyView()
-                    }
-                }
+                //}
             }.navigationBarHidden(true)
         }
     }
