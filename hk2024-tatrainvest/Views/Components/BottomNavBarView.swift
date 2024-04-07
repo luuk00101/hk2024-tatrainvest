@@ -29,20 +29,20 @@ struct BottomNavBarView: View {
                     .foregroundColor(currentScreen == .stats ? highlightColor : .white)
             }
             Spacer()
-            Button(action: {
-                self.currentScreen = .news
-            }) {
-                Image(systemName: "newspaper.fill")
-                    .foregroundColor(currentScreen == .news ? highlightColor : .white)
-            }
-            Spacer()
-            Button(action: {
-                self.currentScreen = .profile
-            }) {
-                Image(systemName: "person.fill")
-                    .foregroundColor(currentScreen == .profile ? highlightColor : .white)
-            }
-            Spacer()
+            //Button(action: {
+            //    self.currentScreen = .news
+            //}) {
+            //    Image(systemName: "newspaper.fill")
+            //        .foregroundColor(currentScreen == .news ? highlightColor : .white)
+            //}
+            //Spacer()
+            //Button(action: {
+            //    self.currentScreen = .profile
+            //}) {
+            //    Image(systemName: "person.fill")
+            //        .foregroundColor(currentScreen == .profile ? highlightColor : .white)
+            //}
+            //Spacer()
         }
         .padding()
         .background(Color("DarkGray"))
