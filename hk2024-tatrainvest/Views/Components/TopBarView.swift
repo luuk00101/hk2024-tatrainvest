@@ -16,12 +16,12 @@ struct TopBarView: View {
                             .frame(width: 50, height: 50) // Adjust the width and height as needed
             
             Spacer()
-                .frame(width: 80)
+                .frame(width: 110)
             
             Button(action: {
                 // Action for tapping on the portfolio balance
             }) {
-                Text("$12,345.67") // Example balance
+                Text("1000 €") // Example balance
                     .foregroundColor(.white)
                     .bold()
             }

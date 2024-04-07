@@ -9,11 +9,14 @@ import SwiftUI
 
 struct SurveyButton: View {
     let title: String
-    let action1: () -> Void
-    let bgColor: Color = Color(red: 1/255, green: 142/255, blue: 237/255, opacity: 1.0)
+    let action: () -> Void // Renamed for clarity
+    let bgColor: Color = Color.blue // Placeholder for your Color("MainBlue")
     
     var body: some View {
-        Button(action: action1) {
+        Button(action: {
+            self.action() // This calls the action passed to the button
+            self.triggerHapticFeedback(style: .medium) // This triggers the haptic feedback immediately after
+        }) {
             Text(title.uppercased())
                 .foregroundColor(.white)
                 .frame(width: 300, height: 50)
@@ -24,10 +27,18 @@ struct SurveyButton: View {
                 .padding(5)
         }
     }
-}
-
-#Preview {
-    SurveyButton(title: "hi") {
-        print("asdf")
+    
+    func triggerHapticFeedback(style: UIImpactFeedbackGenerator.FeedbackStyle) {
+        let generator = UIImpactFeedbackGenerator(style: style)
+        generator.impactOccurred()
     }
 }
+
+struct SurveyButton_Previews: PreviewProvider {
+    static var previews: some View {
+        SurveyButton(title: "hi") {
+            print("Button tapped")
+        }
+    }
+}
+

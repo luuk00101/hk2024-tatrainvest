@@ -8,10 +8,6 @@
 import SwiftUI
 
 struct LogInView: View {
-    @State private var username = ""
-    @State private var password = ""
-    @State private var wrongUsername: Float = 0
-    @State private var wrongPassword: Float  = 0
     @State private var showingLoginScreen = false
     
     @State private var isLoggedIn = false

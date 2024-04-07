@@ -12,7 +12,9 @@ struct StartButton: View {
     let action1: () -> Void
     
     var body: some View {
-        Button(action: action1) {
+        Button(action: {
+            self.action1()
+            self.triggerHapticFeedback(style: .medium)}) {
             Text(title.uppercased())
                 .foregroundColor(.black)
                 .frame(width: 300, height: 50)
@@ -20,6 +22,11 @@ struct StartButton: View {
                 .cornerRadius(5)
         }
     }
+    
+    func triggerHapticFeedback(style: UIImpactFeedbackGenerator.FeedbackStyle) {
+                let generator = UIImpactFeedbackGenerator(style: style)
+                generator.impactOccurred()
+            }
 }
 
 #Preview {

@@ -8,7 +8,7 @@
 import SwiftUI
 
 enum CurrentScreen {
-    case home, stats, news, profile
+    case home, stats, game, news, profile
 }
 
 struct DashboardView: View {
@@ -29,6 +29,10 @@ struct DashboardView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .clipped()
+            }
+            
+            if currentScreen == .game {
+                
             }
             
             BottomNavBarView(currentScreen: $currentScreen)
