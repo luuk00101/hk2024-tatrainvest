@@ -14,7 +14,7 @@ struct DiscussView: View {
     var body: some View {
         VStack {
             if messages.isEmpty {
-                Text("Discuss")
+                Text("Discuss with TIM")
                     .font(Font.title.weight(.light))
                     .foregroundColor(.white)
                     .frame(maxWidth: .infinity, alignment: .leading)

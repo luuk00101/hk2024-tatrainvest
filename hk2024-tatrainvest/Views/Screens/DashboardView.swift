@@ -18,7 +18,7 @@ struct DashboardView: View {
         VStack {
             TopBarView()
             if currentScreen == .home {
-                Button(action: {
+                Button(action: { currentScreen = CurrentScreen.stats
                                         }) {
                                             Image("main-report")
                                         }
@@ -26,8 +26,9 @@ struct DashboardView: View {
             }
             if currentScreen == .stats {
                 Image("stats")
-                    .resizable()
-                    .frame(height: 609)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .clipped()
             }
             
             BottomNavBarView(currentScreen: $currentScreen)
