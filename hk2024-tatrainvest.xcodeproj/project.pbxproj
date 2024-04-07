@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		80BF57812BC236F400F87B78 /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BF577E2BC236F400F87B78 /* StartButton.swift */; };
+		80BF57822BC236F400F87B78 /* Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BF577F2BC236F400F87B78 /* Slider.swift */; };
+		80BF57832BC236F400F87B78 /* SurveyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BF57802BC236F400F87B78 /* SurveyButton.swift */; };
+		80BF57862BC236FC00F87B78 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BF57842BC236FC00F87B78 /* LogInView.swift */; };
+		80BF57872BC236FC00F87B78 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BF57852BC236FC00F87B78 /* QuestionView.swift */; };
 		80FEEC6A2BC16BB300759AF5 /* hk2024_tatrainvestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FEEC692BC16BB300759AF5 /* hk2024_tatrainvestApp.swift */; };
 		80FEEC6E2BC16BB500759AF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80FEEC6D2BC16BB500759AF5 /* Assets.xcassets */; };
 		80FEEC712BC16BB500759AF5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80FEEC702BC16BB500759AF5 /* Preview Assets.xcassets */; };
@@ -17,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		80BF577E2BC236F400F87B78 /* StartButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartButton.swift; path = ../../../../../../Downloads/StartButton.swift; sourceTree = "<group>"; };
+		80BF577F2BC236F400F87B78 /* Slider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Slider.swift; path = ../../../../../../Downloads/Slider.swift; sourceTree = "<group>"; };
+		80BF57802BC236F400F87B78 /* SurveyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SurveyButton.swift; path = ../../../../../../Downloads/SurveyButton.swift; sourceTree = "<group>"; };
+		80BF57842BC236FC00F87B78 /* LogInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogInView.swift; path = ../../../../../../Downloads/LogInView.swift; sourceTree = "<group>"; };
+		80BF57852BC236FC00F87B78 /* QuestionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionView.swift; path = ../../../../../../Downloads/QuestionView.swift; sourceTree = "<group>"; };
 		80FEEC662BC16BB300759AF5 /* hk2024-tatrainvest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hk2024-tatrainvest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80FEEC692BC16BB300759AF5 /* hk2024_tatrainvestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hk2024_tatrainvestApp.swift; sourceTree = "<group>"; };
 		80FEEC6D2BC16BB500759AF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,6 +67,7 @@
 		80FEEC682BC16BB300759AF5 /* hk2024-tatrainvest */ = {
 			isa = PBXGroup;
 			children = (
+				80FEEC692BC16BB300759AF5 /* hk2024_tatrainvestApp.swift */,
 				80FEEC772BC17A3F00759AF5 /* Views */,
 				80FEEC6D2BC16BB500759AF5 /* Assets.xcassets */,
 				80FEEC6F2BC16BB500759AF5 /* Preview Content */,
@@ -75,7 +86,6 @@
 		80FEEC772BC17A3F00759AF5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				80FEEC692BC16BB300759AF5 /* hk2024_tatrainvestApp.swift */,
 				80FEEC792BC17A5C00759AF5 /* Screens */,
 				80FEEC782BC17A4D00759AF5 /* Components */,
 			);
@@ -85,6 +95,9 @@
 		80FEEC782BC17A4D00759AF5 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				80BF577F2BC236F400F87B78 /* Slider.swift */,
+				80BF577E2BC236F400F87B78 /* StartButton.swift */,
+				80BF57802BC236F400F87B78 /* SurveyButton.swift */,
 				80FEEC862BC1D97800759AF5 /* DiscussView.swift */,
 				80FEEC7E2BC17ACB00759AF5 /* TopBarView.swift */,
 				80FEEC822BC17BE200759AF5 /* BottomNavBarView.swift */,
@@ -95,6 +108,8 @@
 		80FEEC792BC17A5C00759AF5 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				80BF57842BC236FC00F87B78 /* LogInView.swift */,
+				80BF57852BC236FC00F87B78 /* QuestionView.swift */,
 				80FEEC7A2BC17A8400759AF5 /* DashboardView.swift */,
 			);
 			path = Screens;
@@ -170,11 +185,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80BF57872BC236FC00F87B78 /* QuestionView.swift in Sources */,
+				80BF57812BC236F400F87B78 /* StartButton.swift in Sources */,
 				80FEEC7B2BC17A8400759AF5 /* DashboardView.swift in Sources */,
 				80FEEC832BC17BE200759AF5 /* BottomNavBarView.swift in Sources */,
 				80FEEC7F2BC17ACB00759AF5 /* TopBarView.swift in Sources */,
 				80FEEC6A2BC16BB300759AF5 /* hk2024_tatrainvestApp.swift in Sources */,
 				80FEEC872BC1D97800759AF5 /* DiscussView.swift in Sources */,
+				80BF57862BC236FC00F87B78 /* LogInView.swift in Sources */,
+				80BF57822BC236F400F87B78 /* Slider.swift in Sources */,
+				80BF57832BC236F400F87B78 /* SurveyButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
