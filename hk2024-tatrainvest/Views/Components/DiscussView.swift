@@ -9,25 +9,21 @@ import SwiftUI
 
 struct DiscussView: View {
     @State private var messageText: String = ""
-    @State private var messages: [String] = []
+    @State private var chatMessages: [ChatMessage] = ChatMessage.sampleMessages
     
     var body: some View {
         VStack {
-            if messages.isEmpty {
+            if chatMessages.isEmpty {
                 Text("Discuss with TIM")
                     .font(Font.title.weight(.light))
                     .foregroundColor(.white)
                     .frame(maxWidth: .infinity, alignment: .leading)
             } else {
                 ScrollView {
-                    ForEach(messages, id: \.self) { message in
-                        Text(message)
-                            .foregroundColor(.white)
-                            .padding()
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .background(Color.gray.opacity(0.1))
-                            .cornerRadius(10)
+                    ForEach(chatMessages, id:\.id) { message in
+                        Text(message.content)
                     }
+                    
                 }
             }
             
@@ -46,7 +42,7 @@ struct DiscussView: View {
                     .background(Color.gray.opacity(0.1))
                     .cornerRadius(10)
                     .frame(maxWidth: .infinity)
-                    .onSubmit(sendMessage)
+                    //.onSubmit(sendMessage)
             }
         }
         .padding()
@@ -57,12 +53,27 @@ struct DiscussView: View {
         }
     }
     
-    private func sendMessage() {
-        guard !messageText.isEmpty else { return }
-        messages.append(messageText)
-        messageText = "" // Update the state directly without animation
-        self.endEditing() // Dismiss the keyboard
+    //private func sendMessage() {
+    //   guard !messageText.isEmpty else { return }
+    //    messages.append(messageText)
+    //    messageText = "" // Update the state directly without animation
+    //    self.endEditing() // Dismiss the keyboard
+    //}
+}
+
+struct ChatMessage {
+    let id: String
+        let content: String
+        let isUser: Bool
     }
+
+extension ChatMessage {
+    static let sampleMessages = [
+        ChatMessage(id:UUID().uuidString, content: "Hello, how are you?", isUser: false),
+        ChatMessage(id:UUID().uuidString, content: "Hi! Good!", isUser: false),
+        ChatMessage(id:UUID().uuidString, content: "That's great!", isUser: false),
+        ChatMessage(id:UUID().uuidString, content: "Bye!", isUser: false)
+    ]
 }
 
 extension View {

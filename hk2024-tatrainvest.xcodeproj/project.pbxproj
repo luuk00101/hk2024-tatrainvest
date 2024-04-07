@@ -13,6 +13,7 @@
 		80D73F812BC247DC002AFB48 /* SurveyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D73F7E2BC247DC002AFB48 /* SurveyButton.swift */; };
 		80D73F842BC247E7002AFB48 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D73F822BC247E7002AFB48 /* QuestionView.swift */; };
 		80D73F852BC247E7002AFB48 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D73F832BC247E7002AFB48 /* LogInView.swift */; };
+		80D73F882BC24F40002AFB48 /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = 80D73F872BC24F40002AFB48 /* OpenAI */; };
 		80FEEC6A2BC16BB300759AF5 /* hk2024_tatrainvestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FEEC692BC16BB300759AF5 /* hk2024_tatrainvestApp.swift */; };
 		80FEEC6E2BC16BB500759AF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80FEEC6D2BC16BB500759AF5 /* Assets.xcassets */; };
 		80FEEC712BC16BB500759AF5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80FEEC702BC16BB500759AF5 /* Preview Assets.xcassets */; };
@@ -44,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80D73F882BC24F40002AFB48 /* OpenAI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +136,9 @@
 			dependencies = (
 			);
 			name = "hk2024-tatrainvest";
+			packageProductDependencies = (
+				80D73F872BC24F40002AFB48 /* OpenAI */,
+			);
 			productName = "hk2024-tatrainvest";
 			productReference = 80FEEC662BC16BB300759AF5 /* hk2024-tatrainvest.app */;
 			productType = "com.apple.product-type.application";
@@ -162,6 +167,9 @@
 				Base,
 			);
 			mainGroup = 80FEEC5D2BC16BB300759AF5;
+			packageReferences = (
+				80D73F862BC24F40002AFB48 /* XCRemoteSwiftPackageReference "OpenAI" */,
+			);
 			productRefGroup = 80FEEC672BC16BB300759AF5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -404,6 +412,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		80D73F862BC24F40002AFB48 /* XCRemoteSwiftPackageReference "OpenAI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MacPaw/OpenAI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		80D73F872BC24F40002AFB48 /* OpenAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 80D73F862BC24F40002AFB48 /* XCRemoteSwiftPackageReference "OpenAI" */;
+			productName = OpenAI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 80FEEC5E2BC16BB300759AF5 /* Project object */;
 }
