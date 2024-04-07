@@ -15,3 +15,7 @@ struct hk2024_tatrainvestApp: App {
         }
     }
 }
+
+#Preview {
+    LogInView()
+}

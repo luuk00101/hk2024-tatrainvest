@@ -62,3 +62,7 @@ struct ContentView_Previews: PreviewProvider {
         LogInView()
     }
 }
+
+#Preview {
+    LogInView()
+}

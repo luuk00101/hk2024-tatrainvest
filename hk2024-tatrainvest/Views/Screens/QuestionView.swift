@@ -14,22 +14,6 @@ struct QuestionView: View {
     @State private var wrongPassword: Float  = 0
     @State private var showingLoginScreen = false
     
-    private let questions = ["Máš už skúsenosti s investovaním?",
-                             "Si členom správnej rady / shareholder vo verejne obchodovanej firme",
-                             "Si politicky exponovaná osoba?",
-                             "Si si vedomý rizika spojeným s investovaním?",
-                             "Akú investičnú stratégiu preferuješ?",
-                             "Ako často chceš byť informovaný",
-                             "Akú sumu by si chcel mesačne investovať?"]
-    private let buttons = [["Pravidelne investujem",
-                            "Už som v minulosti investoval",
-                            "Nemám skúsenosti"]
-                           ,["Áno","Nie"],
-                           ["Áno","Nie"],
-                           ["Áno","Nie"],
-                           ["slider"],
-                           ["Denne","Týždenne","Mesačne"],
-                           ["slider"]]
     @State private var qCount = 0
     @State private var shouldNavigateToLogin = false
     private var bCount = 0
@@ -63,7 +47,7 @@ struct QuestionView: View {
                     //Spacer()
                     
                     // heading
-                    Text(questions[qCount])
+                    Text(questionsB[qCount].text)
                     //.font(.title)
                         .font(.system(size: 28))
                         .bold()
@@ -109,7 +93,7 @@ struct QuestionView: View {
     }
     
     func nextQuestion() {
-        if (qCount < questions.count - 1) {
+        if (qCount < questionsB.count - 1) {
             qCount = qCount + 1
         }
     }
@@ -127,3 +111,7 @@ struct QuestionView: View {
             QuestionView()
         }
     }
+
+#Preview {
+    QuestionView()
+}
