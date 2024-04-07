@@ -58,7 +58,6 @@
 			isa = PBXGroup;
 			children = (
 				80FEEC772BC17A3F00759AF5 /* Views */,
-				80FEEC692BC16BB300759AF5 /* hk2024_tatrainvestApp.swift */,
 				80FEEC6D2BC16BB500759AF5 /* Assets.xcassets */,
 				80FEEC6F2BC16BB500759AF5 /* Preview Content */,
 			);
@@ -95,6 +94,7 @@
 		80FEEC792BC17A5C00759AF5 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				80FEEC692BC16BB300759AF5 /* hk2024_tatrainvestApp.swift */,
 				80FEEC7A2BC17A8400759AF5 /* DashboardView.swift */,
 			);
 			path = Screens;
