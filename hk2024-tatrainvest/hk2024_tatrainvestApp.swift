@@ -1,4 +1,4 @@
-//
+/
 //  hk2024_tatrainvestApp.swift
 //  hk2024-tatrainvest
 //
@@ -11,7 +11,7 @@ import SwiftUI
 struct hk2024_tatrainvestApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LogInView()
         }
     }
 }
